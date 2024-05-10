@@ -1,0 +1,33 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Camisa",
+        "precio": 20.99,
+        "descripcion": "Camisa de algodón de manga larga",
+        "categoria": "ropa"
+      },
+      {
+        "id": 2,
+        "nombre": "Pantalones",
+        "precio": 34.99,
+        "descripcion": "Pantalones vaqueros ajustados",
+        "categoria": "ropa"
+      },
+      {
+        "id": 3,
+        "nombre": "Zapatos deportivos",
+        "precio": 49.99,
+        "descripcion": "Zapatos deportivos para correr",
+        "categoria": "calzado"
+      },
+      {
+        "id": 4,
+        "nombre": "Teléfono móvil",
+        "precio": 299.99,
+        "descripcion": "Teléfono inteligente con pantalla táctil",
+        "categoria": "tecnología"
+      }
+    ]
+  }
+  
