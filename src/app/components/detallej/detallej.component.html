@@ -1,0 +1,10 @@
+<div style="background-color: azure;">
+  <div class="container" style="width: 450px;">
+    <img class="card-img-top" [src]="juego?.galeria" alt="Card image" height="350">
+    <div class="card-body">
+      <h4 class="card-title" style="text-align: center;">{{juego?.nombre}}</h4>
+      <p class="card-text" style="text-align: center;">{{juego?.detalle}}</p>
+      <button [routerLink]="['../../productos']" class="btn btn-outline-danger">Regresar</button>
+    </div>
+  </div>
+</div>

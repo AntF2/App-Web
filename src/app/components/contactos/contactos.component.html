@@ -1,0 +1,51 @@
+<div class="container">
+    <h1 style="text-align: center;">Filtrar Mayor - Menor</h1>
+    
+    <div class="row mb-3">
+      <div class="col">
+        <label for="minPrice">Cantidad Menor:</label>
+        <input type="text" [(ngModel)]="min" class="form-control" placeholder="Precio mínimo">
+      </div>
+      <div class="col">
+        <label for="maxPrice">Cantidad Mayor:</label>
+        <input type="text" [(ngModel)]="max" class="form-control" placeholder="Precio máximo">
+      </div>
+      <div class="col align-self-end">
+        <button (click)="buscar()" class="btn btn-primary">Buscar</button>
+      </div>
+    </div>
+  
+    <hr>
+    
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Galeria</th>
+          <th scope="col">Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let juego of Evluar">
+          <td>{{juego.id}}</td>
+          <td>{{juego.nombre}}</td>
+          <td>{{juego.precio | currency}}</td>
+          <td>
+            <ng-container *ngIf="visualizar === juego.id">
+              <button (click)="ocultar('')" class="btn btn-warning">Ocultar Imagen</button>
+              <img [src]="juego.galeria" alt="Imagen de {{juego.nombre}}" height="200">
+            </ng-container>
+            <ng-container *ngIf="visualizar !== juego.id">
+              <button (click)="ocultar(juego.id)" class="btn btn-info">Ver Imagen</button>
+            </ng-container>
+          </td>
+          <td>
+            <button [routerLink]="['/detallej', juego.id]" class="btn btn-success">Detalles</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
